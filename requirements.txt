@@ -1,0 +1,5 @@
+opencv-python
+dlib
+face_recognition
+pyserial
+pip install -r requirements.txt

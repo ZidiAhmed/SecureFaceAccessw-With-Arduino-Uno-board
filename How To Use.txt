@@ -1,0 +1,69 @@
+SecureFaceAccess System Installation and Usage Guide
+
+Overview
+
+SecureFaceAccess is a facial recognition-based access control system that captures and recognizes faces in real-time. The system integrates with an Arduino Uno to control a door mechanism. When a recognized face is detected, the door opens, and a "Welcome" message is displayed.
+
+Prerequisites
+
+Hardware:
+Computer with a webcam
+Arduino Uno board
+Door mechanism (e.g., servo motor)
+Necessary cables to connect the Arduino Uno to the computer and the door mechanism
+Software:
+Python 3.x installed on your computer
+Arduino IDE installed on your computer
+Required Python packages (install using pip install -r requirements.txt)
+Installation Steps
+
+1. Clone the Repository
+Clone the SecureFaceAccess repository to your local machine:
+
+bash
+Copy code
+git clone https://github.com/your-username/SecureFaceAccess.git
+cd SecureFaceAccess
+2. Install Dependencies
+Install the required Python packages using the provided requirements.txt file:
+
+bash
+Copy code
+pip install -r requirements.txt
+3. Upload Arduino Code
+Open the Arduino IDE.
+Load the arduino_code.ino file located in the SecureFaceAccess directory.
+Select the correct board type and port in the Arduino IDE.
+Upload the code to the Arduino Uno.
+4. Connect Hardware
+Connect the hardware components as follows:
+
+Connect the webcam to your computer.
+Connect the Arduino Uno to your computer via USB.
+Connect the door mechanism (e.g., servo motor) to the specified digital pin on the Arduino Uno.
+Usage
+
+1. Run the Python Script
+Run the main.py Python script to start the SecureFaceAccess system:
+
+bash
+Copy code
+python main.py
+2. Face Recognition
+The webcam will capture frames and recognize faces in real-time.
+When a recognized face is detected, the door will open, and a "Welcome" message will be displayed.
+3. Capture Unknown Faces
+If an unknown face is detected, the system will capture an image and assign a unique serial number to the person.
+The door will still open for unknown faces, but their images will be saved in the images folder.
+4. Close the System
+Press 'q' on your keyboard to close the system. This will release the webcam and close the application.
+
+Troubleshooting
+
+Ensure that all hardware components are correctly connected.
+Check the serial port in the Python script (main.py) and update it if necessary.
+Adjust delays in the Arduino code (arduino_code.ino) and Python script as needed for your door mechanism.
+Conclusion
+
+Congratulations! You have successfully installed and set up the SecureFaceAccess system. Feel free to customize and extend the system based on your requirements.
+
